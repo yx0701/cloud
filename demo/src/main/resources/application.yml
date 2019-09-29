@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: auth
+  datasource:
+    url: jdbc:postgresql://192.168.5.3:5432/postgres?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: postgres
+    password: psql
+    schema-username: postgres
+    schema-password: psql
+    platform: postgres
+    continue-on-error: true
+    initialization-mode: always
+    driver-class-name:
+
+
+
+mybatis:
+#  mapper-locations: classpath*:mybatis/*Dao.xml
+  type-aliases-package: com.yx.auth
+  configuration:
+    map-underscore-to-camel-case: true
+      #增加打印sql语句，一般用于本地开发测试
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
