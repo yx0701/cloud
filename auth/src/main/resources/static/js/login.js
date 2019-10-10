@@ -39,7 +39,7 @@ function login() {
         //请求的媒体类型
         contentType: "application/json;charset=UTF-8",
         //请求地址
-        url: "http://192.168.58.221:8090/login/jwtLogin/",
+        url: "http://localhost:8090/login/jwtLogin/",
         //数据，json字符串
         data: JSON.stringify(list),
         //请求成功
@@ -78,7 +78,7 @@ function reg() {
         //请求的媒体类型
         contentType: "application/json;charset=UTF-8",
         //请求地址
-        url: "http://192.168.58.221:8090/login/validateReg/",
+        url: "http://localhost:8090/login/validateReg/",
         //数据，json字符串
         data: JSON.stringify(param),
         //请求成功
@@ -109,7 +109,7 @@ function addRegUser(username, password) {
         'password': password
     };
     $.ajax({
-        url: 'http://192.168.58.221:8090/login/reg',
+        url: 'http://localhost:8090/login/reg',
         data: JSON.stringify(param),
         type: 'POST',
         contentType: "application/json;charset=UTF-8",
