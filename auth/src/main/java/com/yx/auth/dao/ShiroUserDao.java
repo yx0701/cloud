@@ -25,13 +25,16 @@ public interface ShiroUserDao {
                             many = @Many(select = "com.yx.auth.dao.ShiroUserDao.findPermissionByRoleId",fetchType = FetchType.DEFAULT))
                     }
             )
-    List<Role> findRoleByUserId(String userId);
+    List<Role> findRoleByUserId(int userId);
 
     @Select("select p.id, p.name, p.url, p.description from role_permission rp " +
             "left join permission p on rp.permission_id = p.id " +
             "where rp.role_id = #{roleId}")
-    List<Permission> findPermissionByRoleId(String roleId);
+    List<Permission> findPermissionByRoleId(int roleId);
 
-    @Select("select * from user where id = #{id}")
-    ShiroUser getShiroUserById(String id);
+    @Select("select * from user where name = #{userName}")
+    ShiroUser getShiroUserByUserName(String userName);
+
+    @Select("select id from user where name = #{userName}")
+    Integer getIdByuserName(String userName);
 }

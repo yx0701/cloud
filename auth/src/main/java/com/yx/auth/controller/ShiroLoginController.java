@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.*;
 public class ShiroLoginController {
 
     @GetMapping("/pub/need_login")
-    public JsonData login(String id,String password){
+    public JsonData login(String userName,String password){
 
         Subject subject = SecurityUtils.getSubject();
         try {
-            UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(id, password);
+            UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userName, password);
 
             subject.login(usernamePasswordToken);
 

@@ -15,9 +15,10 @@ public class UserService {
     @Autowired
     private ShiroUserDao shiroUserDao;
 
-    public ShiroUser getShiroUserByUserId(String id){
+    public ShiroUser getShiroUserByUserName(String userName){
+        Integer id = shiroUserDao.getIdByuserName(userName);
         List<Role> roleList = shiroUserDao.findRoleByUserId(id);
-        ShiroUser user = shiroUserDao.getShiroUserById(id);
+        ShiroUser user = shiroUserDao.getShiroUserByUserName(userName);
         user.setRoleList(roleList);
         return user;
     }

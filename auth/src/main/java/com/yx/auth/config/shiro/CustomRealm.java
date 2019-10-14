@@ -12,7 +12,6 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class CustomRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         System.out.println("授权 doGetAuthorizationInfo");
         ShiroUser newShiroUser = (ShiroUser) principalCollection.getPrimaryPrincipal();
-        ShiroUser user = userService.getShiroUserByUserId(newShiroUser.getId());
+        ShiroUser user = userService.getShiroUserByUserName(newShiroUser.getName());
 
         List<String> stringRoleList = new ArrayList<>();
         List<String> stringPermissionList = new ArrayList<>();
@@ -51,7 +50,7 @@ public class CustomRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         System.out.println("认证 doGetAuthenticationInfo");
         String id = (String)token.getPrincipal();
-        ShiroUser shiroUser = userService.getShiroUserByUserId(id);
+        ShiroUser shiroUser = userService.getShiroUserByUserName(id);
         String pwd = shiroUser.getPassword();
         if(null == pwd || "".equals(pwd.trim())) {
             return null;

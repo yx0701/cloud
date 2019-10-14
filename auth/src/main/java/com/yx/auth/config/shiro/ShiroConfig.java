@@ -23,7 +23,7 @@ import java.util.Map;
 public class ShiroConfig {
 
 
-/*    @Bean
+    @Bean
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager){
 
         System.out.println("执行 ShiroFilterFactoryBean.shiroFilter()");
@@ -78,7 +78,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;
-    }*/
+    }
 
 
     @Bean
@@ -217,6 +217,13 @@ public class ShiroConfig {
         return authorizationAttributeSourceAdvisor;
     }
 
+
+    @Bean
+    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() {
+        DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
+        advisorAutoProxyCreator.setProxyTargetClass(true);
+        return advisorAutoProxyCreator;
+    }
 
     /**
      *  用来扫描上下文寻找所有的Advistor(通知器),

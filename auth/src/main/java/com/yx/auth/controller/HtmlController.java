@@ -5,6 +5,7 @@ import com.yx.auth.entity.user.Permission;
 import com.yx.auth.entity.user.Role;
 import com.yx.auth.entity.user.ShiroUser;
 import com.yx.auth.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ public class HtmlController {
     private ShiroUserDao shiroUserDao;
 
     @GetMapping("/root")
+    @RequiresRoles("root")
     public String root(){
         return "root";
     }
@@ -32,17 +34,17 @@ public class HtmlController {
 
     @GetMapping("/findPermissionByRoleId")
     public List<Permission> findPermissionByRoleId(String id){
-        return shiroUserDao.findPermissionByRoleId("1");
+        return shiroUserDao.findPermissionByRoleId(1);
     }
 
     @GetMapping("/findRoleByUserId")
     public List<Role> findRoleByUserId(String id){
-        return shiroUserDao.findRoleByUserId("1");
+        return shiroUserDao.findRoleByUserId(1);
     }
 
     @GetMapping("/findAllInfoByUserId")
-    public ShiroUser findAllInfoByUserId(String id){
-        return userService.getShiroUserByUserId("1");
+    public ShiroUser findAllInfoByUserId(String userName){
+        return userService.getShiroUserByUserName(userName);
     }
 
 }
