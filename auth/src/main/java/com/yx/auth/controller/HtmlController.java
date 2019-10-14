@@ -5,6 +5,7 @@ import com.yx.auth.entity.user.Permission;
 import com.yx.auth.entity.user.Role;
 import com.yx.auth.entity.user.ShiroUser;
 import com.yx.auth.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,7 @@ public class HtmlController {
     }
 
     @GetMapping("/common")
+    @RequiresPermissions("root_perm")
     public String common(){
         return "common";
     }

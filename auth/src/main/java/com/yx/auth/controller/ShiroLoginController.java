@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping
 public class ShiroLoginController {
 
-    @GetMapping("/pub/need_login")
-    public JsonData login(String userName,String password){
+    @PostMapping("/pub/need_login")
+    public JsonData login(String userName, String password) {
+
+        if(userName ==null || password == null){
+            return JsonData.buildError();
+        }
 
         Subject subject = SecurityUtils.getSubject();
         try {
@@ -22,13 +26,28 @@ public class ShiroLoginController {
 
             return JsonData.buildSuccess((String) subject.getSession().getId());
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
 
             return JsonData.buildError();
 
         }
 
+
+    }
+
+
+    @RequestMapping("/pub/logout")
+    public JsonData findMyPlayRecord() {
+
+        Subject subject = SecurityUtils.getSubject();
+
+//        if (subject.getPrincipals() != null) {
+//        }
+
+        SecurityUtils.getSubject().logout();
+
+        return JsonData.buildSuccess("logout成功");
 
     }
 }
