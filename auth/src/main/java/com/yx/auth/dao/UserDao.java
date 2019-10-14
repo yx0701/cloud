@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Update;
 @Mapper
 public interface UserDao {
 
-    @Select("select * from user where name =#{name} and password =#{password}")
+    @Select("select name, password from user where name =#{name} and password =#{password}")
     User login(User user);
 
     @Select("select count(*) from user where name =#{userName}")

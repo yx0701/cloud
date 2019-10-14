@@ -1,13 +1,48 @@
 package com.yx.auth.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import com.yx.auth.dao.ShiroUserDao;
+import com.yx.auth.entity.user.Permission;
+import com.yx.auth.entity.user.Role;
+import com.yx.auth.entity.user.ShiroUser;
+import com.yx.auth.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.List;
+
+@RestController
 public class HtmlController {
 
-    @PostMapping("/login")
-    public String loginIndex(){
-        return "";
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private ShiroUserDao shiroUserDao;
+
+    @GetMapping("/root")
+    public String root(){
+        return "root";
     }
+
+    @GetMapping("/common")
+    public String common(){
+        return "common";
+    }
+
+    @GetMapping("/findPermissionByRoleId")
+    public List<Permission> findPermissionByRoleId(String id){
+        return shiroUserDao.findPermissionByRoleId("1");
+    }
+
+    @GetMapping("/findRoleByUserId")
+    public List<Role> findRoleByUserId(String id){
+        return shiroUserDao.findRoleByUserId("1");
+    }
+
+    @GetMapping("/findAllInfoByUserId")
+    public ShiroUser findAllInfoByUserId(String id){
+        return userService.getShiroUserByUserId("1");
+    }
+
 }

@@ -13,12 +13,12 @@ spring:
     continue-on-error: true
     initialization-mode: always
 
-#mybatis:
-#  mapper-locations: classpath*:mybatis/*.xml
-#  type-aliases-package: com.yx.auth.entity
-#  configuration:
-#    map-underscore-to-camel-case: true
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml
+  type-aliases-package: com.yx.auth.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #eureka:
 #  client:

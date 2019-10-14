@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //@EnableEurekaClient
-@MapperScan("com.yx.auth.dao")
+//@MapperScan("com.yx.auth.dao")
 public class AuthApplication {
 
     public static void main(String[] args) {

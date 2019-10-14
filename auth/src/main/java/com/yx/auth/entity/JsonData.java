@@ -1,6 +1,8 @@
 package com.yx.auth.entity;
 
-public class JsonData {
+import java.io.Serializable;
+
+public class JsonData implements Serializable {
 
     private int code;
     private String msg;

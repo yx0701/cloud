@@ -48,7 +48,7 @@ function login() {
                 alert("用户名或密码错误");
                 return;
             }
-            window.location.href = "/html/index.html";
+            window.location.href = "./index.html";
         },
         //请求失败，包含具体的错误信息
         error: function (e) {
