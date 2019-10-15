@@ -7,13 +7,16 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping
 public class ShiroLoginController {
 
     @PostMapping("/pub/need_login")
-    public JsonData login(String userName, String password) {
-
+    public JsonData login(@RequestBody Map<String,String> map) {
+        String userName = map.get("userName");
+        String password = map.get("password");
         if(userName ==null || password == null){
             return JsonData.buildError();
         }
@@ -37,7 +40,7 @@ public class ShiroLoginController {
     }
 
 
-    @RequestMapping("/pub/logout")
+    @RequestMapping("/logout")
     public JsonData findMyPlayRecord() {
 
         Subject subject = SecurityUtils.getSubject();
