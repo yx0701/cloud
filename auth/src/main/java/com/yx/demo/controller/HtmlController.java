@@ -1,10 +1,10 @@
-package com.yx.controller;
+package com.yx.demo.controller;
 
-import com.yx.dao.ShiroUserDao;
-import com.yx.entity.user.Permission;
-import com.yx.entity.user.Role;
-import com.yx.entity.user.ShiroUser;
-import com.yx.service.UserService;
+import com.yx.demo.dao.ShiroUserDao;
+import com.yx.demo.entity.user.Permission;
+import com.yx.demo.entity.user.Role;
+import com.yx.demo.entity.user.ShiroUser;
+import com.yx.demo.service.UserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;

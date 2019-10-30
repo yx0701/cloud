@@ -1,4 +1,4 @@
-package com.yx.config;
+package com.yx.demo.config;
 
 
 import org.springframework.context.annotation.Bean;

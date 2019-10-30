@@ -1,4 +1,4 @@
-package com.yx.datastructure;
+package com.yx.demo.datastructure;
 
 
 import java.util.Stack;

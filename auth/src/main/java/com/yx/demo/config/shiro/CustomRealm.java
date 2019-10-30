@@ -1,9 +1,9 @@
-package com.yx.config.shiro;
+package com.yx.demo.config.shiro;
 
-import com.yx.entity.user.Permission;
-import com.yx.entity.user.Role;
-import com.yx.entity.user.ShiroUser;
-import com.yx.service.UserService;
+import com.yx.demo.entity.user.Permission;
+import com.yx.demo.entity.user.Role;
+import com.yx.demo.service.UserService;
+import com.yx.demo.entity.user.ShiroUser;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

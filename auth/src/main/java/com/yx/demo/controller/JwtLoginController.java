@@ -1,9 +1,9 @@
-package com.yx.controller;
+package com.yx.demo.controller;
 
-import com.yx.dao.UserDao;
-import com.yx.entity.JsonData;
-import com.yx.entity.User;
-import com.yx.util.JWTUtil;
+import com.yx.demo.dao.UserDao;
+import com.yx.demo.entity.JsonData;
+import com.yx.demo.entity.User;
+import com.yx.demo.util.JWTUtil;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

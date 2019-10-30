@@ -1,4 +1,4 @@
-package com.yx.sort;
+package com.yx.demo.sort;
 
 import java.util.Arrays;
 

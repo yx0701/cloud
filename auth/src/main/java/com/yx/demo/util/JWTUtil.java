@@ -1,6 +1,6 @@
-package com.yx.util;
+package com.yx.demo.util;
 
-import com.yx.entity.User;
+import com.yx.demo.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

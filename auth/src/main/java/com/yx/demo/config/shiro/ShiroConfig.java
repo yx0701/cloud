@@ -1,4 +1,4 @@
-package com.yx.config.shiro;
+package com.yx.demo.config.shiro;
 
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;

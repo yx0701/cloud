@@ -1,6 +1,6 @@
-package com.yx.controller;
+package com.yx.demo.controller;
 
-import com.yx.entity.JsonData;
+import com.yx.demo.entity.JsonData;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;

@@ -1,7 +1,7 @@
-package com.yx.controller;
+package com.yx.demo.controller;
 
-import com.yx.entity.user.ShiroUser;
-import com.yx.service.CacheService;
+import com.yx.demo.entity.user.ShiroUser;
+import com.yx.demo.service.CacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

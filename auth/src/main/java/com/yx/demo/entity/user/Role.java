@@ -1,4 +1,4 @@
-package com.yx.entity.user;
+package com.yx.demo.entity.user;
 
 import java.io.Serializable;
 import java.util.List;

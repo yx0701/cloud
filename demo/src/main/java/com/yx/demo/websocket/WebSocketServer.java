@@ -1,4 +1,4 @@
-package com.yx.websocket;
+package com.yx.demo.websocket;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;

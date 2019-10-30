@@ -1,4 +1,4 @@
-package com.yx.config.shiro;
+package com.yx.demo.config.shiro;
 
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.CollectionUtils;

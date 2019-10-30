@@ -1,7 +1,4 @@
-package com.yx.datastructure;
-
-import java.util.ArrayList;
-import java.util.Stack;
+package com.yx.demo.datastructure;
 
 public class SortList {
 

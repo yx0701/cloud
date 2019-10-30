@@ -1,4 +1,4 @@
-package com.yx;
+package com.yx.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

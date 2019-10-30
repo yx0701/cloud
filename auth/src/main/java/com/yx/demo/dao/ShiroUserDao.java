@@ -1,8 +1,8 @@
-package com.yx.dao;
+package com.yx.demo.dao;
 
-import com.yx.entity.user.Permission;
-import com.yx.entity.user.Role;
-import com.yx.entity.user.ShiroUser;
+import com.yx.demo.entity.user.Permission;
+import com.yx.demo.entity.user.Role;
+import com.yx.demo.entity.user.ShiroUser;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 

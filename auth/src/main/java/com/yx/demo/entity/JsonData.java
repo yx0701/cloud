@@ -1,4 +1,4 @@
-package com.yx.entity;
+package com.yx.demo.entity;
 
 import java.io.Serializable;
 

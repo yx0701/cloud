@@ -1,4 +1,4 @@
-package com.yx.websocket;
+package com.yx.demo.websocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

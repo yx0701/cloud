@@ -1,7 +1,7 @@
-package com.yx.service;
+package com.yx.demo.service;
 
-import com.yx.dao.CacheDao;
-import com.yx.entity.user.ShiroUser;
+import com.yx.demo.dao.CacheDao;
+import com.yx.demo.entity.user.ShiroUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

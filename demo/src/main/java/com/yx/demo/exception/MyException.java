@@ -1,4 +1,4 @@
 package com.yx.demo.exception;
 
-public class MyException {
+public class MyException extends RuntimeException {
 }

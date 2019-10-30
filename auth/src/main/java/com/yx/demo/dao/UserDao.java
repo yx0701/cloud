@@ -1,6 +1,6 @@
-package com.yx.dao;
+package com.yx.demo.dao;
 
-import com.yx.entity.User;
+import com.yx.demo.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

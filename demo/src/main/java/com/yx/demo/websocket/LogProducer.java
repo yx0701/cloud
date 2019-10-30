@@ -1,4 +1,4 @@
-package com.yx.websocket;
+package com.yx.demo.websocket;
 
 //@Component
 public class LogProducer implements Runnable {

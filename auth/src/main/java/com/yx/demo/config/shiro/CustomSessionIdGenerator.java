@@ -1,4 +1,4 @@
-package com.yx.config.shiro;
+package com.yx.demo.config.shiro;
 
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.eis.SessionIdGenerator;

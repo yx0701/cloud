@@ -1,4 +1,4 @@
-package com.yx;
+package com.yx.demo;
 
 public class TestMain {
 

@@ -1,8 +1,8 @@
-package com.yx.service;
+package com.yx.demo.service;
 
-import com.yx.dao.ShiroUserDao;
-import com.yx.entity.user.Role;
-import com.yx.entity.user.ShiroUser;
+import com.yx.demo.dao.ShiroUserDao;
+import com.yx.demo.entity.user.Role;
+import com.yx.demo.entity.user.ShiroUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

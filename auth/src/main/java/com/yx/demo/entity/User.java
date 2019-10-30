@@ -1,4 +1,4 @@
-package com.yx.entity;
+package com.yx.demo.entity;
 
 public class User {
     private String name;

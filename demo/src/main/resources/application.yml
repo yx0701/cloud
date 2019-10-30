@@ -1,30 +1,36 @@
 server:
-  port: 8080
+  port: 8091
+#  随机端口
+#  port: ${random.int[8080,9999]}
 spring:
   application:
-    name: auth
+    name: demo
+  # mysql configuration
   datasource:
-    url: jdbc:postgresql://192.168.5.3:5432/postgres?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: postgres
-    password: psql
-    schema-username: postgres
-    schema-password: psql
-    platform: postgres
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    schema-username: root
+    schema-password: root
+    platform: mysql
     continue-on-error: true
     initialization-mode: always
-    driver-class-name:
+    driver-class-name: com.mysql.jdbc.Driver
 
 
-
+# mybatis configuration
 mybatis:
-#  mapper-locations: classpath*:mybatis/*Dao.xml
-  type-aliases-package: com.yx.auth
+  mapper-locations: classpath*:mybatis/*.xml
+  type-aliases-package: com.yx.auth.entity
   configuration:
     map-underscore-to-camel-case: true
-      #增加打印sql语句，一般用于本地开发测试
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+myTest: hi
+
+logging:
+  config:
+  level:
+    com.yx.demo: trace
+#  path: C:/Users/yangxiao/Desktop   #默认生成 spring.log
+#  file: C:/Users/yangxiao/Desktop/demo.log   #指定文件名

@@ -1,4 +1,4 @@
-package com.yx.config.shiro;
+package com.yx.demo.config.shiro;
 
 import org.apache.shiro.web.servlet.ShiroHttpServletRequest;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
